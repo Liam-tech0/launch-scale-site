@@ -7,7 +7,7 @@ export function FooterSection() {
   const year = new Date().getFullYear()
 
   return (
-    <footer id="contact" className="relative bg-black border-t border-white/10 py-12 px-4 sm:px-6">
+    <footer id="contact" className="relative bg-black border-t border-white/10 py-12 px-4 sm:px-6 font-[family-name:var(--font-rubik)]">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}

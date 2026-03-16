@@ -47,8 +47,8 @@ export function HeroSection() {
               launch_and_scale.sh
             </span>
           </div>
-          {/* Right: nav links */}
-          <nav className="flex items-center gap-6">
+          {/* Right: pill nav */}
+          <nav className="hidden sm:flex items-center gap-1 border border-white/10 rounded-full bg-black/60 backdrop-blur-md px-2 py-1 font-[family-name:var(--font-rubik)]">
             {[
               { label: 'Le Défi', href: '#challenge' },
               { label: 'Vidéos', href: '#videos' },
@@ -57,11 +57,28 @@ export function HeroSection() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-xs tracking-widest text-white/40 hover:text-white transition-colors duration-200 hidden sm:block"
+                className="px-3 py-1 text-[11px] font-semibold tracking-widest uppercase text-white/40 hover:text-white rounded-full hover:bg-white/5 transition-all duration-200"
               >
                 {item.label}
               </a>
             ))}
+            <a
+              href="#videos"
+              className="ml-1 px-4 py-1 text-[11px] font-bold tracking-widest uppercase rounded-full transition-all duration-200"
+              style={{ backgroundColor: GREEN, color: '#000' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent'
+                e.currentTarget.style.color = GREEN
+                e.currentTarget.style.border = `1px solid ${GREEN}`
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = GREEN
+                e.currentTarget.style.color = '#000'
+                e.currentTarget.style.border = '1px solid transparent'
+              }}
+            >
+              Vidéos
+            </a>
           </nav>
         </div>
       </div>
